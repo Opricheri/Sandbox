@@ -9,7 +9,11 @@ def sandbox():
 
 @app.route('/2')
 def page2():
-    return "ここは２ページ。"
+    return render_template('1.html')
+
+@app.route('/3')
+def page3():
+    return render_template('2.html')
 
 
 if __name__ == '__main__':

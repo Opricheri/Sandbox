@@ -4,12 +4,25 @@
 <head>
     <meta charset="utf-8">
     <title>Sandbox</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <!CSSのデバッグ用>
+        <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
 </head>
 
 <body>
-    <h1>Sandbox</h1>
+    <div class="home">
+        <h1><a href="sandbox.html">Sandbox</a></h1>
+    </div>
+
     <p>ここはなんか適当にサイトを作って遊ぶための個人サイトです。</p>
+    <h2>Menu</h2>
+    <div class="frontbar">
+        <ul id="menu">
+            <li>趣味→</li>
+            <li><a href="http://www.fate-go.jp">Fate/GrandOrder公式サイト</a></li>
+            <li><a href="https://twitter.com/fgoproject">FGO公式Twitter</a></li>
+        </ul>
+    </div>
 </body>
 
 </html>

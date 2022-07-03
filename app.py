@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, redirect
 
 app = Flask(__name__, static_folder='./templates/images')
 
 @app.route('/')
 def sandbox():
-    return render_template('1.html')
+    return render_template('sandbox.html')
 
 
 if __name__ == '__main__':

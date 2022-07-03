@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Sandbox</title>
+    <link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <!CSSのデバッグ用>
+    <!↑CSSのデバッグ用>
         <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
 </head>
 
@@ -14,7 +16,7 @@
         <h1><a href="sandbox.html">Sandbox</a></h1>
     </div>
 
-    <p>ここはなんか適当にサイトを作って遊ぶための個人サイトです。</p>
+    <p id="alert">※ここはなんか適当に作って遊ぶための個人サイトです。</p>
     <h2>Menu</h2>
     <div class="frontbar">
         <ul id="menu">
@@ -23,6 +25,7 @@
             <li><a href="https://twitter.com/fgoproject">FGO公式Twitter</a></li>
         </ul>
     </div>
+    <py-script>print("Hello new world")</py-script>
 </body>
 
 </html>

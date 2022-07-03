@@ -18,23 +18,33 @@ body {
     text-decoration: none
 }
 
-h2 {
-    margin: 10px 0px 10px 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: hsl(0, 100%, 99%);
+#alert {
+    display: inline;
+    color: #2b2b2b;
+    font-size: 16px;
+    margin: 0px;
+    padding: 2px 10px 0px 10px;
+    border: solid;
+    background-color: #e7fd7bc3;
+    text-align: center;
 }
 
-.frontbar {
+h2 {
+    margin: 10px 0px 0px 0px;
+    padding: 5px 10px 5px 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    border: solid #000000;
+}
+
+div.frontbar {
     margin: 0px;
     padding: 0px;
-}
-
-.frontbar ul{
-
+    background-color: #ffffff;
+    border: solid #000000;
 }
 
 #memu {
-    width: 30px;
     margin: 0px;
 }
 
@@ -42,7 +52,7 @@ h2 {
     display: inline;
     background-color: #dcdcdc;
     font-size: 15px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 10x 0px;
     padding: 5px 10px 5px 10px;
 }
 

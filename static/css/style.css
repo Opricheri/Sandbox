@@ -29,6 +29,31 @@ body {
     text-align: center;
 }
 
+.alert_body {
+    background-color: #cf4b4b;
+}
+
+div.alert_lock {
+    display: block;
+    height: 500px;
+    margin: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
+    background-color: #ff0000;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    border: solid #000000 5px;
+}
+
+div.alert_lock > h1 {
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+}
+
 h2 {
     margin: 10px 0px 0px 0px;
     padding: 5px 10px 5px 10px;

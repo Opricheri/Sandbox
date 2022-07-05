@@ -7,6 +7,10 @@ app = Flask(__name__, static_folder='./static/css')
 def sandbox():
     return render_template('sandbox.html')
 
+@app.route('/1')
+def lock():
+    return render_template('lock.html')
+
 @app.route('/2')
 def page2():
     return render_template('1.html')

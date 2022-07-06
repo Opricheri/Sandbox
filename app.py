@@ -3,13 +3,23 @@ import re
 
 app = Flask(__name__, static_folder='./static/css')
 
-@app.route('/')
+@app.route('/lock')
 def sandbox():
     return render_template('sandbox.html')
 
-@app.route('/1')
+@app.route('/')
 def lock():
     return render_template('lock.html')
+
+password = "Revelation"
+
+@app.route('/secret', methods = ["POST"])
+def secret():
+    pswd = request.form.get("pass_lock")      #簡易パスワードシステム！
+    if pswd == password:
+        return render_template('secret.html')
+    else:
+        return render_template('lock.html')
 
 @app.route('/2')
 def page2():

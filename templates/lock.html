@@ -11,6 +11,11 @@
 <body class="alert_body">
     <div class="alert_lock">
         <h1>封鎖中</h1>
+        <form action="/secret">
+            <label for="pass_lock">解除キーヲ入力シテ下サイ</label>
+            <input type="text" id="pass_lock" name="pass_lock" minlength="6" maxlength="10" required>
+            <input type="submit" formmethod="post" value="解除">
+        </form>
     </div>
 </body>
 

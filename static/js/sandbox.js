@@ -6,3 +6,10 @@ myButton.onclick = function() {
 function showDialog() {
     alert('Hello');
 }
+
+let cnt = 0;
+function countClick() {
+    cnt ++;
+    let element = document.getElementById("count");
+    element.textContent = String(cnt);
+}

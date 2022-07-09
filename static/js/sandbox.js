@@ -1,10 +1,10 @@
 let myButton = document.getElementById("demo");
 myButton.onclick = function() {
-    alert("痛っ！");
+    alert("痛っ！違うこっちじゃない！");
 }
 
 function showDialog() {
-    alert('Hello');
+    alert('【クリックゲームという名の苦行】');
 }
 
 let cnt = 0;

@@ -6,13 +6,41 @@
     <title>Sandbox</title>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <!↑CSSのデバッグ用>
-    <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+        <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+        <script type="text/javascript" src="{{ url_for("static", filename='sandbox.js') }}"></script>
 </head>
 
 <body>
     <div class="home">
         <h1><a href="/">Sandbox</a></h1>
     </div>
+
+    <!謎のローディング>
+    <div class="loader loader--style6" title="5">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;"
+            xml:space="preserve">
+            <rect x="0" y="13" width="4" height="5" fill="#333">
+                <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s"
+                    repeatCount="indefinite" />
+            </rect>
+            <rect x="10" y="13" width="4" height="5" fill="#333">
+                <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s"
+                    repeatCount="indefinite" />
+            </rect>
+            <rect x="20" y="13" width="4" height="5" fill="#333">
+                <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s"
+                    repeatCount="indefinite" />
+            </rect>
+        </svg>
+    </div>
+    <!ここまで>
 
     <p id="alert">※ここはなんか適当に作って遊ぶための個人サイトです。</p>
     <h2>Menu</h2>
@@ -25,15 +53,26 @@
     </div>
     <div class="frontbar">
         <ul id="menu">
-            <li><a href="/2">小説→</a></li>
+            <li>小説→</li>
+            <li><a href="/2">Novel Project</a></li>
+        </ul>
+    </div>
+    <div class="frontbar">
+        <ul id="alert_lock">
+            <li><a href="/lock">封鎖中</a></li>
         </ul>
     </div>
     <h2><em>このサイトのどこかに隠し要素があるから見つけてみてね</em></h2>
+
     <div id="demo">押してみて</div>
-    <button onclick="showDialog()">Show Dialog</button>
-    <button onclick="countClick()">Count</button>
-    <p class="result"><span id="count" style="color: #ff0000;">0</span></p>
+    <button onclick="showDialog()" style="width: 250px; height: 100px;">Please push me</button>
+    <button onclick="countClick()" style="width: 250px; height: 100px;">Count</button>
+    <p class="result"><span id="count" style="font-size: 40px; color: #ff0000;">0</span></p>
+
+    <p class="margin_1"></p>
+    <div class="footer">Sandbox-verse</div>
     <script src="../static/js/sandbox.js"></script>
+    <!↑jsのデバッグ用>
 </body>
 
 </html>

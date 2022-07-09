@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
 import re
 
-app = Flask(__name__, static_folder='./static/css')
+app = Flask(__name__)
 
 @app.route('/')
 def sandbox():

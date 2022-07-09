@@ -1,10 +1,18 @@
 body {
+    margin: 0px 5px 0px 5px;
+    padding: 0;
     background-color: #bbbbbb;
+    background: linear-gradient(#d3d3d3, #9f9f9f);
+    background-size: 100%;
+}
+
+.margin_1 {
+    height: 100px;
 }
 
 .home h1 {
     margin: 10px 0px 10px 0px;
-    padding: 10px 0px 10px 0px ;
+    padding: 10px 0px 10px 0px;
     border: solid #000000 5px;
     background-color: #78ae67;
     text-align: center;
@@ -29,6 +37,32 @@ body {
     text-align: center;
 }
 
+#alert_lock {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ff0000;
+    display: block;
+    margin: 10px 20px 10px 20px;
+    padding: 0px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#alert_lock li{
+    background-color: #ff0000;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    padding: 13px 0px 10px 0px;
+    list-style: none;
+}
+
+#alert_lock a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
 .alert_body {
     background-color: #cf4b4b;
 }
@@ -45,13 +79,13 @@ div.alert_lock {
     border: solid #000000 5px;
 }
 
-div.alert_lock > h1 {
+div.alert_lock>h1 {
     position: absolute;
     text-align: center;
     top: 30%;
     left: 50%;
-    transform:translate(-50%,-50%);
-    width:100%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 h2 {
@@ -73,7 +107,7 @@ div.frontbar {
     margin: 0px;
 }
 
-#menu > li{
+#menu>li {
     display: inline;
     background-color: #dcdcdc;
     font-size: 15px;
@@ -86,4 +120,31 @@ div.frontbar {
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
     text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+    background-color: #a8a8a8;
+}
+
+@media screen and (max-width : 640px) {
+    body {
+        background-color: #bbbbbb;
+        background: linear-gradient(#d3d3d3, #9f9f9f);
+        background-size: 100%;
+    }
+}
+
+@media screen and (min-width : 640px) {
+    body {
+        background-color: #bbbbbb;
+        background: linear-gradient(#d3d3d3, #9f9f9f);
+        background-size: 100%;
+    }
 }

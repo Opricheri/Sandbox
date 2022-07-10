@@ -1,9 +1,3 @@
-addEventListener("keydown", keydownfunc);
-
-function keydownfunc(event) {
-    alert(event.key);
-}
-
 /*御神籤*/
 let myClick = document.getElementById("omikuji");
 myClick.onclick = function () {

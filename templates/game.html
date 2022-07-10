@@ -4,29 +4,30 @@
 <head>
     <meta charset="utf-8">
     <title>Game Project</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+    <link rel="stylesheet" type="text/css" href="../static/css/game.css">
+    <link rel="stylesheet" href='{{ url_for("static", filename="game.css") }}'>
     <script type="text/javascript" src="{{ url_for("static", filename='gameproject.js') }}"></script>
 </head>
 
 <body>
-    <div class="home">
-        <h1>Game Project</h1>
-    </div>
+    <div class="background">
+        <div class="home">
+            <h1>Game Project</h1>
+        </div>
 
-    <h2>御神籤（Prototype）</h2>
-    <div class="frontbar">
-        <button id="omikuji" style="font-size: 20px; height: 50px; width: 200px;">Click</button>
-        <p id="result"><span id="count"
-                style="font-size: 30px; font-family: 'Times New Roman', Times, serif; color: #fa2e2e; font-weight: bolder; margin: 10px; padding: 10px;">結果</span>
-        </p>
-        <p>&nbsp;適当な御神籤だよ</p>
-    </div>
+        <div class="content">
+            <h2>御神籤（Prototype）</h2>
+            <button id="omikuji" style="font-size: 20px; height: 50px; width: 200px;">＜引く＞</button>
+            <p id="result"><span id="count">結果</span>
+            </p>
+            <p>&nbsp;適当な御神籤だよ</p>
+        </div>
 
-    <div class="frontbar">
-        <li>はーい</li>
+        <div class="content">
+            <li>オルガをただ動かすだけのゲーム</li>
+            <iframe src="game2.html" frameborder="0"></iframe>
+        </div>
     </div>
-
     <script src="../static/js/gameproject.js"></script>
 </body>
 

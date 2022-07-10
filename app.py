@@ -36,6 +36,10 @@ def page3():
 def page4():
     return render_template('game.html')
 
+@app.route('/5')
+def page5():
+    return render_template('game2.html')
+
 
 if __name__ == '__main__':
     app.debug = True

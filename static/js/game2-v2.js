@@ -5,11 +5,24 @@ canvas.height = 640;
 
 let ctx = canvas.getContext('2d');
 
+
+let satoimo = new Object();
+satoimo.img = new Image();
+satoimo.img.src = '../static/image/satoimo2.png';
+satoimo.x = 0;
+satoimo.y = 0;
+satoimo.move = 0;
+
 let mapchip = new Image();
 mapchip.src = '../static/image/map.png';
 
-/*数字でマップを表現 */
-/*画像に０と１を割り振っている */
+let key = new Object();
+key.up = false;
+key.down = false;
+key.right = false;
+key.left = false;
+key.push = '';
+
 let map = [
     [0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
     [0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0],
@@ -33,7 +46,10 @@ let map = [
     [0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0]
 ];
 
-addEventListener('load', function() {
+function main() {
+    ctx.fillStyle = "rgb( 0, 0, 0 )";
+    ctx.fillRect(0, 0, 640, 640);
+
     for (let y = 0; y < map.length; y++) {
         for (let x = 0; x < map[y].length; x++) {
             if (map[y][x] === 0) {
@@ -44,70 +60,75 @@ addEventListener('load', function() {
             }
         }
     }
-}, false);
 
-/*WASDでキャラ移動*/
-document.write('<img id="satoimo" src="../static/image/satoimo2.png">');
+    ctx.drawImage(satoimo.img, satoimo.x, satoimo.y);
 
-let satoimo = new Object();
-satoimo.y = 0;
-satoimo.x = 0;
-satoimo.move = 0;
-
-let pressed_key = '';
-
-let key = new Object();
-key.up = false;
-key.down = false;
-key.right = false;
-key.left = false;
-
-
-function main() {
-    addEventListener("keydown", wasd_down);
-    addEventListener("keyup", wasd_up);
+    addEventListener("keydown", wasd_down, false);
+    addEventListener("keyup", wasd_up, false);
 
     if (satoimo.move === 0) {
         if (key.left === true) {
-            satoimo.move = 32;
-            pressed_key = 'left';
+            let x = satoimo.x/32;
+            let y = satoimo.y/32;
+            x--;
+            if (map[y][x] === 0) {
+                satoimo.move = 32;
+                key.push = 'left';
+            }
         }
         if (key.up === true) {
-            satoimo.move = 32;
-            pressed_key = 'up';
+            let x = satoimo.x/32;
+            let y = satoimo.y/32;
+            if (y > 0) {
+                y--;
+                if (map[y][x] === 0) {
+                    satoimo.move = 32;
+                    key.push = 'up';
+                }
+            }
         }
         if (key.right === true) {
-            satoimo.move = 32;
-            pressed_key = 'right';
+            let x = satoimo.x/32;
+            let y = satoimo.y/32;
+            x++;
+            if (map[y][x] === 0) {
+                satoimo.move = 32;
+                key.push = 'right';
+            }
         }
         if (key.down === true) {
-            satoimo.move = 32;
-            pressed_key = 'down';
+            let x = satoimo.x/32;
+            let y = satoimo.y/32;
+            if (y < 19) {
+                y++;
+                if (map[y][x] === 0) {
+                    satoimo.move = 32;
+                    key.push = 'down';
+                }
+            }
         }
     }
 
     if (satoimo.move > 0) {
         satoimo.move -= 4;
-        if (pressed_key === 'left') {
+        if (key.push === 'left') {
             satoimo.x -= 4;
         }
-        if (pressed_key === 'up') {
+        if (key.push === 'up') {
             satoimo.y -= 4;
         }
-        if (pressed_key === 'right') {
+        if (key.push === 'right') {
             satoimo.x += 4;
         }
-        if (pressed_key === 'down') {
+        if (key.push === 'down') {
             satoimo.y += 4;
         }
     }
 
-    document.getElementById("satoimo").style.top = satoimo.y + "px";
-    document.getElementById("satoimo").style.left = satoimo.x + "px";
-
     requestAnimationFrame(main);
 }
-requestAnimationFrame(main);
+/*ページと依存している全てのデータが読み込まれたら、メインループ開始 */
+addEventListener('load', main(), false);
 
 function wasd_down(wasd) {
     let key_code = wasd.keyCode;

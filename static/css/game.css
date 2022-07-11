@@ -1,7 +1,7 @@
 body {
     width: 100%;
     left: 0;
-    padding: 50px 0px 0px 0px;
+    padding: 100px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     background-color: #c1cbbb;
 }
@@ -26,7 +26,22 @@ body {
 
 .home a {
     color: #000000;
-    text-decoration: none
+    text-decoration: none;
+}
+
+.frontbar {
+    color: #000000;
+    font-size: 30px;
+    background-color: #383d75;
+}
+
+.frontbar li {
+    list-style: none;
+}
+
+.frontbar a {
+    color: #000000;
+    text-decoration: none;
 }
 
 .content {
@@ -45,6 +60,10 @@ body {
     padding: 0px 10px 0px 10px;
     border-bottom: solid #383d75 5px;
     width: 50%;
+}
+
+.content li {
+    list-style: none;
 }
 
 .content #omikuji {

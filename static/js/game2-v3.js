@@ -24,7 +24,7 @@ let map = [
     [0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1],
     [0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0],
     [0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0]
-];
+]
 
 //スプライトクラス
 //img : スプライトに使う画像
@@ -78,33 +78,31 @@ class Input {
         this.right = false;
     }
     push_key() {
-        addEventListener("keydown", () => {
-            let key_code = wasd.keyCode;
-            if (key_code === 65) {
+        addEventListener("keydown", event => {
+            if (event.key === 'a') {
                 this.left = true;
             }
-            if (key_code === 87) {
+            if (event.key === 'w') {
                 this.up = true;
             }
-            if (key_code === 68) {
+            if (event.key === 'd') {
                 this.right = true;
             }
-            if (key_code === 83) {
+            if (event.key === 's') {
                 this.down = true;
             }
         }, false);
-        addEventListener("keyup", () => {
-            let key_code = wasd.keyCode;
-            if (key_code === 65) {
+        addEventListener("keyup", event => {
+            if (event.key === 'a') {
                 this.left = false;
             }
-            if (key_code === 87) {
+            if (event.key === 'w') {
                 this.up = false;
             }
-            if (key_code === 68) {
+            if (event.key === 'd') {
                 this.right = false;
             }
-            if (key_code === 83) {
+            if (event.key === 's') {
                 this.down = false;
             }
         }, false);
@@ -165,24 +163,25 @@ class Player {
                     }
                 }
             }
-            if (this.move > 0) {
-                this.move -= 4;
-                if (input.push === 'left') {
-                    this.x -= 4;
-                }
-                if (input.push === 'up') {
-                    this.y -= 4;
-                }
-                if (input.push === 'right') {
-                    this.x += 4;
-                }
-                if (input.push === 'down') {
-                    this.y += 4;
-                }
+        }
+        if (this.move > 0) {
+            this.move -= 4;
+            if (input.push === 'left') {
+                this.x -= 4;
+            }
+            if (input.push === 'up') {
+                this.y -= 4;
+            }
+            if (input.push === 'right') {
+                this.x += 4;
+            }
+            if (input.push === 'down') {
+                this.y += 4;
             }
         }
     }
 }
+
 
 let game = new Game(640, 640);
 
@@ -191,17 +190,22 @@ let player = new Player(0, 0);
 let s_second = new Sprite('../static/image/satoimo-brothers.png', 33, 0);
 let s_third = new Sprite('../static/image/satoimo-brothers.png', 65, 0);
 
-let floor = new Sprite('../static/image/map.png', 0, 0);
-let wall = new Sprite('../static.image/map.png', 33, 0);
+let floor = new Sprite('../static/image/map1.png', 0, 0);
+let wall = new Sprite('../static/image/map1.png', 33, 0);
+
 
 function main() {
-    ctx.fillStyle = "rgb(0, 0, 0)";
+    ctx.fillStyle = "rgb( 0, 0, 0 )";
     ctx.fillRect(0, 0, 640, 640);
 
     for (var y = 0; y < map.length; y++) {
         for (var x = 0; x < map[y].length; x++) {
-            if (map[y][x] === 0) game.add(floor, 32 * x, 32 * y);
-            if (map[y][x] === 1) game.add(wall, 32 * x, 32 * y);
+            if (map[y][x] === 0) {
+                game.add(floor, 32 * x, 32 * y);
+            }
+            if (map[y][x] === 1) {
+                game.add(wall, 32 * x, 32 * y);
+            }
         }
     }
 

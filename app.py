@@ -24,9 +24,9 @@ def secret():
     else:
         return render_template('lock.html')
 
-@app.route('/2')
+@app.route('/novel')
 def page2():
-    return render_template('1.html')
+    return render_template('novel1.html')
 
 @app.route('/3')
 def page3():
@@ -36,9 +36,9 @@ def page3():
 def page4():
     return render_template('game.html')
 
-@app.route('/5')
+@app.route('/satoimo-game')
 def page5():
-    return render_template('game2.html')
+    return render_template('game2-2.html')
 
 
 if __name__ == '__main__':

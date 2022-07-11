@@ -13,8 +13,10 @@ satoimo.x = 0;
 satoimo.y = 0;
 satoimo.move = 0;
 
+
 let mapchip = new Image();
 mapchip.src = '../static/image/map.png';
+
 
 let key = new Object();
 key.up = false;

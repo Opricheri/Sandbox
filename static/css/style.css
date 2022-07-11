@@ -27,14 +27,14 @@ body {
 }
 
 #alert {
-    display: inline;
+    display: block;
     color: #2b2b2b;
     font-size: 16px;
     margin: 0px;
     padding: 2px 10px 0px 10px;
     border: solid;
     background-color: #e7fd7bc3;
-    text-align: center;
+    text-align: left;
 }
 
 #alert_lock {

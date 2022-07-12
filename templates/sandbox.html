@@ -61,12 +61,12 @@
             <li><a href="/lock">封鎖中</a></li>
         </ul>
     </div>
-    <h2><em>このサイトのどこかに隠し要素があるから見つけてみてね</em></h2>
+    <h2 id="hint">このサイトのどこかに隠し要素があるから見つけてみてね</h2>
 
     <div id="demo">押してみて</div>
-    <button onclick="showDialog()" style="width: 250px; height: 100px;">Please push me</button>
-    <button onclick="countClick()" style="width: 250px; height: 100px;">Count</button>
-    <p class="result"><span id="count" style="font-size: 40px; color: #ff0000;">0</span></p>
+    <button id="button_dialog" onclick="showDialog()">ﾎﾞﾀﾝｯｯｯ!</button>
+    <button id="button_count" onclick="countClick()">Count</button>
+    <p class="result"><span id="count">0</span></p>
 
     <p class="margin_1"></p>
     <div class="footer">Sandbox-verse</div>

@@ -157,77 +157,13 @@ div.frontbar {
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
-@media all and (min-width: 1024px) and (max-width: 1280px) {
-    body {
-        font-size: 50px;
-    }
-
-    .home h1 {
-        font-size: 110px;
-        margin: 130px 0px 0px 0px;
-        padding: 30px 0px 30px 0px;
-    }
-
-    #alert {
-        font-size: 35px;
-    }
-
-    .frontbar {
-        height: 100px;
-    }
-
-    #menu {
-        margin: 10px 20px 10px 20px;
-        font-size: 40px;
-    }
-
-    #menu li {
-        margin:  5px 0px 5px 5px;
-        padding: 10px;
-        font-size: 40px;
-    }
-
-    #alert_lock {
-        font-size: 35px;
-    }
-
-    #hint {
-        font-size: 35px;
-    }
-
-    #button_dialog {
-        margin: 13px;
-        width: 500px;
-        height: 250px;
-        font-size: 50px;
-    }
-
-    #button_count {
-        margin: 13px;
-        width: 500px;
-        height: 250px;
-        font-size: 50px;
-    }
-
-    #count {
-        display: block;
-        margin: 10px 10px 10px 10px;
-        padding: 50px 10px 50px 10px;
-        font-size: 150px;
-        height: 200px;
-        width: 500px;
-        text-align: center;
-        color: #ff0000;
-        background-color: #000000;
-    }
- }
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
  
 @media all and (min-width: 768px) and (max-width: 1024px) { }
  
 @media all and (min-width: 480px) and (max-width: 768px) { }
  
-@media all and (max-width: 480px) {
- }
+@media all and (max-width: 480px) { }
  
 /*------------------------------------------
   Foundation Media Queries 
@@ -282,6 +218,68 @@ only screen and (min-device-pixel-ratio: 1.5) {
  
 /* iPhone Portrait */
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
+    body {
+        font-size: 80px;
+    }
+
+    .home h1 {
+        font-size: 180px;
+        margin: 130px 0px 0px 0px;
+        padding: 30px 0px 30px 0px;
+    }
+
+    #alert {
+        font-size: 60px;
+    }
+
+    .frontbar {
+        height: 200px;
+    }
+
+    #menu {
+        margin: 30px 40px 30px 10px;
+        font-size: 80px;
+    }
+
+    #menu li {
+        margin:  5px 30px 5px 15px;
+        padding: 10px;
+        font-size: 60px;
+    }
+
+    #alert_lock {
+        font-size: 100px;
+    }
+
+    #hint {
+        font-size: 60px;
+    }
+
+    #button_dialog {
+        margin: 30px;
+        width: 700px;
+        height: 350px;
+        font-size: 50px;
+    }
+
+    #button_count {
+        margin: 30px;
+        width: 700px;
+        height: 350px;
+        font-size: 50px;
+    }
+
+    #count {
+        display: block;
+        margin: 10px 10px 10px 10px;
+        padding: 50px 10px 50px 10px;
+        font-size: 150px;
+        height: 250px;
+        width: 600px;
+        text-align: center;
+        color: #ff0000;
+        background-color: #000000;
+    }
 } 
  
 /* iPhone Landscape */

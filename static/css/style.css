@@ -221,7 +221,68 @@ only screen and (min-device-pixel-ratio: 1.5) {
  
 /* iPhone Landscape */
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
+    body {
+        font-size: 80px;
+    }
 
+    .home h1 {
+        font-size: 180px;
+        margin: 130px 0px 0px 0px;
+        padding: 30px 0px 30px 0px;
+    }
+
+    #alert {
+        font-size: 60px;
+    }
+
+    .frontbar {
+        height: 200px;
+    }
+
+    #menu {
+        margin: 30px 40px 30px 10px;
+        font-size: 80px;
+    }
+
+    #menu li {
+        margin:  5px 30px 5px 15px;
+        padding: 10px;
+        font-size: 60px;
+    }
+
+    #alert_lock {
+        font-size: 100px;
+    }
+
+    #hint {
+        font-size: 60px;
+    }
+
+    #button_dialog {
+        margin: 30px;
+        width: 700px;
+        height: 350px;
+        font-size: 50px;
+    }
+
+    #button_count {
+        margin: 30px;
+        width: 700px;
+        height: 350px;
+        font-size: 50px;
+    }
+
+    #count {
+        display: block;
+        margin: 10px 10px 10px 10px;
+        padding: 50px 10px 50px 10px;
+        font-size: 150px;
+        height: 250px;
+        width: 600px;
+        text-align: center;
+        color: #ff0000;
+        background-color: #000000;
+    }
 }
  
 /* iPad Portrait */

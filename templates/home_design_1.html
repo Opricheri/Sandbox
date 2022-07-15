@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=" 1.0" maximum-scale="1" , user-scalable=no">
+    <title>Sandbox</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/home_design_1.css">
+    <!↑CSSのデバッグ用>
+        <link rel="stylesheet" href='{{ url_for("static", filename="home_design_1.css") }}'>
+        <script type="text/javascript" src="{{ url_for("static", filename='home_design_1') }}"></script>
+</head>
+
+<body>
+    <div class="bar">
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">2page</a></li>
+            <li><a href="#">3page</a></li>
+            <li><a href="#">4page</a></li>
+            <li><a href="#">5page</a></li>
+        </ul>
+    </div>
+
+    <div class="like_newspaper">
+        <div class="title">
+            <li id="title">SANDBOX</li>
+        </div>
+        <div class="box_1">
+            <li>box1<br>英字新聞風のサイトを作りたい。</li>
+        </div>
+        <div class="box_2">
+            <li>box2<br>たくさんBOXを作って並べ替える。</li>
+        </div>
+        <div class="box_3">
+            <li>box3</li>
+        </div>
+        <div class="box_4">
+            <li>box4</li>
+        </div>
+        <div class="box_5">
+            <li>box5</li>
+        </div>
+    </div>
+
+
+    <script src="../static/js/home_design_1.js"></script>
+    <!↑jsのデバッグ用>
+</body>
+
+</html>

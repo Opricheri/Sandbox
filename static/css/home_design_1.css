@@ -496,25 +496,6 @@ a {
 @media all and (min-width: 480px) and (max-width: 768px) {}
 
 @media all and (max-width: 480px) {
-    .title {
-        width: 200px;
-    }
-
-    .box_1 {
-        width: 200px;
-    }
-
-    .box_2 {
-        width: 200px;
-    }
-
-    .box_3 {
-        width: 200px;
-    }
-
-    .box_4 {
-        width: 200px;
-    }
 }
 
 /*------------------------------------------

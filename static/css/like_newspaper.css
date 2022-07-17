@@ -1,0 +1,54 @@
+body {
+    list-style: none;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "a c d"
+    "b c d"
+    "footer footer footer";
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-gap: 5px;
+}
+
+header {
+    grid-area: header;
+    background-color: #cac7b9;
+}
+
+.item1 {
+    grid-area: a;
+    background-color: #cac7b9;
+}
+
+.item2 {
+    grid-area: b;
+    background-color: #cac7b9;
+}
+
+.item3 {
+    grid-area: c;
+    background-color: #cac7b9;
+}
+
+#img_1 {
+    position: relative;
+    width: auto;
+}
+
+.item4 {
+    grid-area: d;
+    background-color: #cac7b9;
+}
+
+#img_2 {
+    position: relative;
+    width: auto;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #cac7b9;
+}

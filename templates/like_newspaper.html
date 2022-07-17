@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=" 1.0" maximum-scale="1" , user-scalable=no">
+    <title>Sandbox</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/like_newspaper.css">
+    <!↑CSSのデバッグ用>
+        <link rel="stylesheet" href='{{ url_for("static", filename="like_newspaper.css") }}'>
+        <script type="text/javascript" src="{{ url_for("static", filename='like_newspaper') }}"></script>
+</head>
+
+<body>
+
+    <div class="main-grid">
+        <header>
+            <h2>SANDBOX</h2>
+        </header>
+        <div class="item1">
+            <h3>お知らせ</h3>
+            <p>メニューの内容</p>
+        </div>
+        <div class="item2">
+            <h3>メインコンテンツ</h3>
+            <p>英字新聞風のサイトを作りたい。</p>
+        </div>
+        <div class="item3">
+            <h3>SPICES</h3>
+            <li><img id="img_1" src="../static/image/spices.jpg"></li>
+        </div>
+        <div class="item4">
+            <h3>スパイスにハマった男。</h3>
+            <li><img id="img_2" src="../static/image/spices2.jpg"></li>
+        </div>
+        <footer>
+            <h2>フッター</h2>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="../static/js/like_newspaper.js"></script>
+    <!↑jsのデバッグ用>
+</body>
+
+</html>

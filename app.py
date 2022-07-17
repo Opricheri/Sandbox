@@ -40,9 +40,13 @@ def page4():
 def page5():
     return render_template('game2-2.html')
 
-@app.route('/like_newspaper')
+@app.route('/like_newspaper_proto')
 def l_np():
     return render_template('home_design_1.html')
+
+@app.route('/like_newspaper')
+def l_n():
+    return render_template('like_newspaper.html')
 
 
 if __name__ == '__main__':

@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=" 1.0" maximum-scale="1" , user-scalable=no">
     <title>Sandbox</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/home_design_1.css">
     <!↑CSSのデバッグ用>
         <link rel="stylesheet" href='{{ url_for("static", filename="home_design_1.css") }}'>
@@ -12,44 +14,70 @@
 </head>
 
 <body>
-    <div class="bar">
-        <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">2page</a></li>
-            <li><a href="#">3page</a></li>
-            <li><a href="#">4page</a></li>
-            <li><a href="#">5page</a></li>
-        </ul>
+    <header id="header">
+        <nav id="g-navi">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">2page</a></li>
+                <li><a href="#">3page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <p id="page-top"><a href="#">^</a></p>
+
+    <div class="openbtn"><span></span><span></span><span></span></div>
+
+    <div id="splash">
+        <div id="splash_text"></div>
     </div>
 
-    <div class="like_newspaper">
-        <div class="title">
-            <li id="title">SANDBOX</li>
-        </div>
-        <div class="box_1">
-            <li>box1<br>英字新聞風のサイトを作りたい。</li>
-        </div>
-        <div class="box_2">
-            <li>box2<br>たくさんBOXを作って並べ替える。</li>
-        </div>
-        <div class="box_3">
-            <li id="box3">SPICES</li>
-            <li><img id="img_1" src="../static/image/spices.jpg"></li>
-        </div>
-        <div class="box_4">
-            <li id="box4">
-                icesSpicesSpicesSpicesSp<br>sSpicesSpicesSpicesSpice<br>esSpicesSpicesSpicesSpic<br>SpicesSpicesSpicesSpices
-            </li>
-            <li><img id="img_2" src="../static/image/spices2.jpg"></li>
-        </div>
-        <div class="box_5">
-            <li><img id="img_3" src="../static/image/Burger.jpg">
-                <img id="img_4" src="../static/image/Burrito.jpg">
-            </li>
+    <section id="info">
+        <h2>Welcome!</h2>
+        <p>ここは個人的なHTML・CSS・JSの練習のためのサイトです。</p>
+    </section>
+
+    <div class="content">
+        <div class="like_newspaper">
+            <div class="title">
+                <li id="title">SANDBOX</li>
+            </div>
+            <div class="box_1">
+                <li><a href="#info" class="modal-open">お知らせ</a></li>
+            </div>
+            <div class="box_2">
+                <li>box2<br>英字新聞風のサイトを作りたい。</li>
+            </div>
+            <div class="box_3">
+                <li id="box3">SPICES</li>
+                <li><img id="img_1" src="../static/image/spices.jpg"></li>
+            </div>
+            <div class="box_4">
+                <li id="box4">
+                    icesSpicesSpicesSpicesSp<br>sSpicesSpicesSpicesSpice<br>esSpicesSpicesSpicesSpic<br>SpicesSpicesSpicesSpices
+                </li>
+                <li><img id="img_2" src="../static/image/spices2.jpg"></li>
+            </div>
+            <div class="box_5">
+                <li><img id="img_3" src="../static/image/Burger.jpg"></li>
+            </div>
+            <div class="box_6">
+                <li><img id="img_4" src="../static/image/Burrito.jpg"></li>
+            </div>
         </div>
     </div>
 
 
+    <footer id="footer">
+        <small>Sandbox</small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="../static/js/home_design_1.js"></script>
     <!↑jsのデバッグ用>
 </body>

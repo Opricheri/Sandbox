@@ -25,7 +25,7 @@ a {
         "d f"
         "d b"
         "footer footer";
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 2fr;
     grid-gap: 5px;
     grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
 }

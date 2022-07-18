@@ -1,31 +1,60 @@
 body {
+    margin: 10px 20px 10px 20px;
+    list-style: none;
+    background-color: #efefef;
+}
+
+li {
     list-style: none;
 }
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 35px;
+}
+
 
 .main-grid {
     display: grid;
     grid-template-areas:
-    "header c d"
-    "a c d"
-    "b e f"
-    "b e f"
-    "footer footer footer";
-    grid-template-columns: 2fr 1fr 1fr;
+        "header e"
+        "a e"
+        "c f"
+        "d f"
+        "d b"
+        "footer footer";
+    grid-template-columns: 2fr 3fr;
     grid-gap: 5px;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
 }
 
 header {
     grid-area: header;
     background-color: #cac7b9;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-indent: 10px;
+}
+
+header h2 {
+    margin: 50px 10px 10px 10px;
 }
 
 .item1 {
     grid-area: a;
     background-color: #cac7b9;
+    font-size: 20px;
+}
+
+.item1 h3{
+    margin: 30px 10px 10px 10px;
+    border-bottom: solid #000000 5px;
+}
+
+.item1 p {
+    margin: 30px 0px 0px 10px;
 }
 
 .item2 {
@@ -38,9 +67,21 @@ header {
     background-color: #cac7b9;
 }
 
+.item3 ul {
+    margin: 0px 10px 0px 10px;
+}
+
+.item3 li {
+    display: inline;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
 #img_1 {
-    position: relative;
-    width: 140px;
+    width: 75%;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 30px;
 }
 
 .item4 {
@@ -49,8 +90,10 @@ header {
 }
 
 #img_2 {
-    position: relative;
-    width: 120px;
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 30px;
 }
 
 .item5 {
@@ -59,7 +102,9 @@ header {
 }
 
 #img_3 {
-    width: 100px;
+    width: 75%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .item6 {
@@ -67,14 +112,235 @@ header {
     background-color: #cac7b9;
 }
 
-#img_4{
-    width: 100px;
+#img_4 {
+    width: 75%;
+    height: 300px;
+    object-fit: cover;
 }
 
 footer {
     grid-area: footer;
     background-color: #cac7b9;
 }
+
+
+
+
+
+
+
+/*ボタン全体の形状*/
+.openbtn {
+    /*はじめは非表示に*/
+    /*display: none;*/
+    /*ボタンの位置*/
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    /*ボタンの形状*/
+    background: #666;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+/*ボタンのアイコン設定*/
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 31px;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+
+@keyframes fadeDownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*========= ヘッダーナビゲーションのためのCSS ===============*/
+/*.doneクラスがついたヘッダー*/
+
+#header.dnone {
+    opacity: 0;
+    /*透過0にして非表示に*/
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+#header.dnone.panelactive {
+    opacity: 1;
+    /*不透明にして出現*/
+}
+
+/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+#header.dnone #g-navi {
+    /*固定位置にして最背面に*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*高さと幅*/
+    width: 100%;
+    height: 100vh;
+    /*天地中央＆テキスト中央揃え*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*はじめは透過0に*/
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+#header.dnone.panelactive #g-navi {
+    opacity: 1;
+    /*不透明に*/
+    z-index: 3;
+    /*最前面に*/
+    background: #cac7b9;
+}
+
+/*リストの形状*/
+
+#header.dnone.panelactive #g-navi li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bolder;
+    transition: all 0.3s;
+    font-size: 25px;
+}
+
+
+
+
+
+
+/*リンクの形状*/
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #686868;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+#page-top a:hover {
+    background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
 
 
 
@@ -113,14 +379,21 @@ footer {
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
-@media all and (min-width: 1024px) and (max-width: 1280px) {}
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    body {
+        margin: 30px 180px 30px 180px;
+    }
+}
 
-@media all and (min-width: 768px) and (max-width: 1024px) {}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin: 20px 70px 20px 70px;
+    }
+}
 
 @media all and (min-width: 480px) and (max-width: 768px) {}
 
-@media all and (max-width: 480px) {
-}
+@media all and (max-width: 480px) {}
 
 /*------------------------------------------
   Foundation Media Queries 

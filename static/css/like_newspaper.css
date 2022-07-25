@@ -213,6 +213,9 @@ footer {
 
 /*========= ヘッダーナビゲーションのためのCSS ===============*/
 /*.doneクラスがついたヘッダー*/
+#g-navi {
+    display: none;
+}
 
 #header.dnone {
     opacity: 0;
